@@ -11,8 +11,7 @@
     };  
 
     hellolib_overlay = final: prev: {
-      hellolib = final.callPackage ./hellolib.nix { };
-      hellolib_exe = final.callPackage ./default.nix { };
+      hellolib = final.callPackage ./default.nix { };
     };
     my_overlays = [ hellolib_overlay ];
     in 
