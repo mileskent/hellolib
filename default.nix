@@ -1,9 +1,8 @@
-{ stdenv, cmake, hellolib }:
+{ stdenv, cmake }:
 
 stdenv.mkDerivation rec {
-  pname = "hellolib_exe";
+  pname = "hellolib";
   version = "0.1.0";
-  src = ./hellolib_exe;
+  src = ./.;
   nativeBuildInputs = [ cmake ];
-  buildInputs = [ hellolib ];
 }
